@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --camel: #C4956A;
+  --teal: #2DBDB6;
+  --coral: #E85D3B;
+  --crimson: #C23B3B;
+  --night: #0A0A0A;
+}
+
+body {
+  background: var(--night);
+  color: #F5F5F5;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.stripe-bar {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--camel) 0%,
+    var(--camel) 20%,
+    var(--teal) 20%,
+    var(--teal) 40%,
+    var(--coral) 40%,
+    var(--coral) 60%,
+    var(--crimson) 60%,
+    var(--crimson) 80%,
+    #B07D4F 80%,
+    #B07D4F 100%
+  );
+}
