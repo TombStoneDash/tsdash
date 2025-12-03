@@ -1,19 +1,19 @@
 import Link from 'next/link';
 
-const shortcuts = [
-  { slug: '/castalert', label: 'CastAlert App', desc: 'iOS casting notifications' },
-  { slug: '/actorlab', label: 'Actor Lab', desc: 'AI tools for actors' },
-  { slug: '/podcast', label: 'Podcast', desc: 'TombStone Dash Talks' },
-  { slug: '/dash', label: 'Main Site', desc: 'tombstonedash.com' },
+const links = [
+  { slug: '/castalert', label: 'CastAlert', desc: 'iOS casting app' },
+  { slug: '/actorlab', label: 'Actor Lab', desc: 'AI for actors' },
+  { slug: '/podcast', label: 'Podcast', desc: 'Conversations' },
+  { slug: '/dash', label: 'Portfolio', desc: 'tombstonedash.com' },
 ];
 
 const socials = [
-  { slug: '/ig', label: 'Instagram' },
-  { slug: '/x', label: 'X / Twitter' },
-  { slug: '/yt', label: 'YouTube' },
-  { slug: '/linkedin', label: 'LinkedIn' },
-  { slug: '/github', label: 'GitHub' },
-  { slug: '/tiktok', label: 'TikTok' },
+  { slug: '/ig', label: 'IG' },
+  { slug: '/x', label: 'X' },
+  { slug: '/yt', label: 'YT' },
+  { slug: '/linkedin', label: 'LI' },
+  { slug: '/github', label: 'GH' },
+  { slug: '/tiktok', label: 'TT' },
 ];
 
 export default function Home() {
@@ -21,63 +21,119 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       {/* Stripe bar */}
       <div className="stripe-bar" />
-      
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="max-w-xl w-full">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 
-              className="text-4xl md:text-5xl mb-4"
+
+      <div className="flex-1 flex items-center justify-center p-6 py-16">
+        <div className="max-w-4xl w-full">
+
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <div className="mb-8">
+              <h1
+                className="text-6xl md:text-8xl mb-2 leading-none"
+                style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
+              >
+                The Dash
+              </h1>
+              <div className="flex items-center justify-center gap-4 text-2xl md:text-3xl" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <span className="text-white/40">1986</span>
+                <span className="dash-symbol">—</span>
+                <span className="text-white/40">????</span>
+              </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed">
+              <p className="text-white/70">
+                Between those two dates on a tombstone lies a simple dash.
+              </p>
+              <p className="text-white/70">
+                That dash represents everything: every breath, every choice, every moment of your life.
+              </p>
+              <p className="philosophy-highlight">
+                What matters isn't when it began or when it ends—it's what you do with that dash.
+              </p>
+            </div>
+          </div>
+
+          {/* Philosophy Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="philosophy-card">
+              <h3 className="card-title">Create</h3>
+              <p className="text-white/60 text-sm">
+                Build things that didn't exist before. Leave your mark through your work.
+              </p>
+            </div>
+
+            <div className="philosophy-card">
+              <h3 className="card-title">Connect</h3>
+              <p className="text-white/60 text-sm">
+                The relationships you build define the dash more than anything else.
+              </p>
+            </div>
+
+            <div className="philosophy-card">
+              <h3 className="card-title">Live</h3>
+              <p className="text-white/60 text-sm">
+                Don't wait for the perfect moment. The dash is happening right now.
+              </p>
+            </div>
+          </div>
+
+          {/* Links Section */}
+          <div className="max-w-2xl mx-auto">
+            <h2
+              className="text-3xl text-center mb-6"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
             >
-              ts<span style={{ color: '#C4956A' }}>dash</span>.com
-            </h1>
-            <p className="text-white/50">
-              Quick links to TombStone Dash
-            </p>
-          </div>
+              My Dash
+            </h2>
 
-          {/* Main shortcuts */}
-          <div className="space-y-3 mb-10">
-            {shortcuts.map((item) => (
-              <Link
-                key={item.slug}
-                href={item.slug}
-                className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/[0.07] transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-white font-medium">{item.label}</span>
-                    <span className="text-white/40 text-sm ml-2">{item.desc}</span>
+            <div className="space-y-3 mb-8">
+              {links.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={item.slug}
+                  className="link-card"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-white font-medium">{item.label}</span>
+                      <span className="text-white/40 text-sm ml-3">{item.desc}</span>
+                    </div>
+                    <span className="text-coral opacity-60 group-hover:opacity-100 transition-opacity">
+                      →
+                    </span>
                   </div>
-                  <span className="text-white/30 group-hover:text-white/60 transition-colors">
-                    →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+                </Link>
+              ))}
+            </div>
 
-          {/* Socials */}
-          <div>
-            <p className="text-white/30 text-sm mb-4 text-center">Social Links</p>
-            <div className="flex flex-wrap justify-center gap-2">
+            {/* Social Links */}
+            <div className="flex flex-wrap justify-center gap-2 mb-12">
               {socials.map((item) => (
                 <Link
                   key={item.slug}
                   href={item.slug}
-                  className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/60 hover:text-white hover:border-white/20 transition-all"
+                  className="social-link"
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
+
+            {/* Footer Quote */}
+            <div className="text-center">
+              <p
+                className="text-xl md:text-2xl mb-2 italic"
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: '#C4956A' }}
+              >
+                "Make your dash count."
+              </p>
+              <p className="text-white/30 text-sm">
+                — TombStone Dash
+              </p>
+            </div>
           </div>
 
-          {/* Footer note */}
-          <p className="text-center text-white/20 text-xs mt-12">
-            Use tsdash.com/[shortcut] for quick access
-          </p>
         </div>
       </div>
     </main>

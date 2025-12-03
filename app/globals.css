@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -6,6 +6,7 @@
   --teal: #2DBDB6;
   --coral: #E85D3B;
   --crimson: #C23B3B;
+  --burnt: #B07D4F;
   --night: #0A0A0A;
 }
 
@@ -15,8 +16,9 @@ body {
   font-family: 'DM Sans', system-ui, sans-serif;
 }
 
+/* Stripe bar - BluePlanet signature */
 .stripe-bar {
-  height: 4px;
+  height: 6px;
   background: linear-gradient(
     90deg,
     var(--camel) 0%,
@@ -27,7 +29,104 @@ body {
     var(--coral) 60%,
     var(--crimson) 60%,
     var(--crimson) 80%,
-    #B07D4F 80%,
-    #B07D4F 100%
+    var(--burnt) 80%,
+    var(--burnt) 100%
   );
+}
+
+/* The Dash symbol */
+.dash-symbol {
+  color: var(--camel);
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+/* Philosophy highlight text */
+.philosophy-highlight {
+  color: var(--camel);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Philosophy cards */
+.philosophy-card {
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, rgba(196, 149, 106, 0.08) 0%, rgba(196, 149, 106, 0.03) 100%);
+  border: 1px solid rgba(196, 149, 106, 0.2);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+  border-color: rgba(196, 149, 106, 0.4);
+  background: linear-gradient(135deg, rgba(196, 149, 106, 0.12) 0%, rgba(196, 149, 106, 0.05) 100%);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--camel);
+  margin-bottom: 0.75rem;
+}
+
+/* Link cards */
+.link-card {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  background: rgba(232, 93, 59, 0.05);
+  border: 1px solid rgba(232, 93, 59, 0.15);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(232, 93, 59, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.link-card:hover::before {
+  left: 100%;
+}
+
+.link-card:hover {
+  border-color: rgba(232, 93, 59, 0.3);
+  background: rgba(232, 93, 59, 0.08);
+  transform: translateX(4px);
+}
+
+/* Social links */
+.social-link {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.social-link:hover {
+  color: var(--camel);
+  border-color: rgba(196, 149, 106, 0.3);
+  background: rgba(196, 149, 106, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Coral color utility */
+.text-coral {
+  color: var(--coral);
 }
