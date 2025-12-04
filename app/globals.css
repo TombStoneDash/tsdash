@@ -12,7 +12,7 @@
 
 body {
   background: var(--night);
-  color: #F5F5F5;
+  color: rgb(245 245 245);
   font-family: 'DM Sans', system-ui, sans-serif;
 }
 
@@ -52,15 +52,15 @@ body {
 /* Philosophy cards */
 .philosophy-card {
   padding: 2rem 1.5rem;
-  background: linear-gradient(135deg, rgba(196, 149, 106, 0.08) 0%, rgba(196, 149, 106, 0.03) 100%);
-  border: 1px solid rgba(196, 149, 106, 0.2);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--camel) 8%, transparent) 0%, color-mix(in srgb, var(--camel) 3%, transparent) 100%);
+  border: 1px solid color-mix(in srgb, var(--camel) 20%, transparent);
   border-radius: 1rem;
   transition: all 0.3s ease;
 }
 
 .philosophy-card:hover {
-  border-color: rgba(196, 149, 106, 0.4);
-  background: linear-gradient(135deg, rgba(196, 149, 106, 0.12) 0%, rgba(196, 149, 106, 0.05) 100%);
+  border-color: color-mix(in srgb, var(--camel) 40%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--camel) 12%, transparent) 0%, color-mix(in srgb, var(--camel) 5%, transparent) 100%);
   transform: translateY(-2px);
 }
 
@@ -76,8 +76,8 @@ body {
 .link-card {
   display: block;
   padding: 1.25rem 1.5rem;
-  background: rgba(232, 93, 59, 0.05);
-  border: 1px solid rgba(232, 93, 59, 0.15);
+  background: color-mix(in srgb, var(--coral) 5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--coral) 15%, transparent);
   border-radius: 0.75rem;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -92,7 +92,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(232, 93, 59, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--coral) 10%, transparent), transparent);
   transition: left 0.5s ease;
 }
 
@@ -101,19 +101,19 @@ body {
 }
 
 .link-card:hover {
-  border-color: rgba(232, 93, 59, 0.3);
-  background: rgba(232, 93, 59, 0.08);
+  border-color: color-mix(in srgb, var(--coral) 30%, transparent);
+  background: color-mix(in srgb, var(--coral) 8%, transparent);
   transform: translateX(4px);
 }
 
 /* Social links */
 .social-link {
   padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgb(255 255 255 / 0.03);
+  border: 1px solid rgb(255 255 255 / 0.1);
   border-radius: 0.5rem;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255 255 255 / 0.5);
   transition: all 0.25s ease;
   text-decoration: none;
   display: inline-block;
@@ -121,8 +121,8 @@ body {
 
 .social-link:hover {
   color: var(--camel);
-  border-color: rgba(196, 149, 106, 0.3);
-  background: rgba(196, 149, 106, 0.05);
+  border-color: color-mix(in srgb, var(--camel) 30%, transparent);
+  background: color-mix(in srgb, var(--camel) 5%, transparent);
   transform: translateY(-2px);
 }
 
