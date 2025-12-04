@@ -123,8 +123,8 @@ export default function Home() {
             {/* Footer Quote */}
             <div className="text-center">
               <p
-                className="text-xl md:text-2xl mb-2 italic"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: '#C4956A' }}
+                className="text-xl md:text-2xl mb-2 italic text-[var(--camel)]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 &ldquo;Make your dash count.&rdquo;
               </p>
