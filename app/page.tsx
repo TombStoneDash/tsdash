@@ -49,7 +49,7 @@ export default function Home() {
                 That dash represents everything: every breath, every choice, every moment of your life.
               </p>
               <p className="philosophy-highlight">
-                What matters isn't when it began or when it ends—it's what you do with that dash.
+                What matters isn&apos;t when it began or when it ends—it&apos;s what you do with that dash.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
             <div className="philosophy-card">
               <h3 className="card-title">Create</h3>
               <p className="text-white/60 text-sm">
-                Build things that didn't exist before. Leave your mark through your work.
+                Build things that didn&apos;t exist before. Leave your mark through your work.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="philosophy-card">
               <h3 className="card-title">Live</h3>
               <p className="text-white/60 text-sm">
-                Don't wait for the perfect moment. The dash is happening right now.
+                Don&apos;t wait for the perfect moment. The dash is happening right now.
               </p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Home() {
                 className="text-xl md:text-2xl mb-2 italic"
                 style={{ fontFamily: "'Cormorant Garamond', serif", color: '#C4956A' }}
               >
-                "Make your dash count."
+                &ldquo;Make your dash count.&rdquo;
               </p>
               <p className="text-white/30 text-sm">
                 — TombStone Dash
